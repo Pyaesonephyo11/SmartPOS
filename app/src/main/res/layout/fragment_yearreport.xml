@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!-- Year Picker -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardSelectYear"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:foreground="?attr/selectableItemBackground">
+
+            <TextView
+                android:id="@+id/tvSelectYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:text="📅 Select Year"
+                android:textSize="16sp"
+                android:fontFamily="@font/intersemibold"
+                android:padding="14dp"
+                android:textColor="@android:color/black"
+                android:drawablePadding="8dp"/>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- TOTAL SECTION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="12dp">
+
+            <!-- Revenue -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginEnd="6dp">
+
+                <LinearLayout
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Revenue"
+                        android:fontFamily="@font/interregular"
+                        android:textSize="14sp"
+                        android:textColor="#666"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvYearTotalyr"
+                        android:text="0 Ks"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/interbold"
+                        android:textColor="#1565C0"
+                        />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+
+            <!-- Profit -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginStart="6dp">
+
+                <LinearLayout
+                    android:background="@color/black"
+                    android:orientation="vertical"
+                    android:padding="12dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Total Profit"
+                        android:fontFamily="@font/interregular"
+                        android:textSize="14sp"
+                        android:textColor="#666"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tvYearProfityr"
+                        android:text="0 Ks"
+                        android:textSize="20sp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/interbold"
+                        android:textColor="#2ECC71"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+        <!-- Export Button -->
+        <Button
+            android:id="@+id/btnExportPdf"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="🧾 Export Yearly PDF"
+            android:textAllCaps="false"
+            android:textSize="15sp"
+            android:fontFamily="@font/intersemibold"
+            android:backgroundTint="#000"
+            android:textColor="#FFF"
+            android:layout_marginBottom="10dp"/>
+        <com.train.pos.YearlyBarChartView
+            android:id="@+id/yearlyChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

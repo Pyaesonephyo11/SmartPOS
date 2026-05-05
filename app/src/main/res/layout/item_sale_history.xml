@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_white_sale"
+    android:layout_margin="1dp"
+    android:padding="8dp"
+
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <!-- Date -->
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="12/19/2025"
+            android:textColor="#373636"
+            android:textSize="13sp"
+            android:fontFamily="@font/intersemibold"/>
+
+        <!-- Items + Qty -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2.5"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvItems"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Coffee"
+                android:textColor="#373636"
+                android:textSize="14sp"
+                android:fontFamily="@font/intersemibold"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tvQtys"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="1 Item"
+                android:textSize="11sp"
+                android:textColor="#777777"/>
+        </LinearLayout>
+
+        <!-- Status -->
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="Completed"
+            android:gravity="center"
+            android:textColor="#037109"
+            android:textSize="12sp"
+            android:padding="4dp"
+            android:background="@drawable/bg_complete"/>
+
+        <!-- Total -->
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:text="6000 Ks"
+            android:textColor="#000000"
+            android:textSize="14sp"
+            android:fontFamily="@font/intersemibold"
+            android:gravity="end"/>
+
+        <!-- Reprint Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnReprint"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_weight="2"
+            android:text="Reprint"
+
+            android:textSize="12sp"
+            android:textColor="@android:color/white"
+
+            app:icon="@drawable/printer"
+            app:iconTint="@android:color/white"
+            app:iconPadding="4dp"
+
+            app:backgroundTint="#059669"
+            app:cornerRadius="8dp"
+            app:elevation="2dp"/>
+    </LinearLayout>
+
+</LinearLayout>

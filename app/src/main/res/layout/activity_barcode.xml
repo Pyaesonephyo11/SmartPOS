@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/back"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Back to Shop (အရောင်းသို့)"
+        app:backgroundTint="@color/appcolor"
+        android:fontFamily="@font/intersemibold"
+        android:textColor="@android:color/white"
+        app:rippleColor="#80FFFFFF"
+        app:cornerRadius="10dp" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:background="#F5F5F5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvgeneral"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+</LinearLayout>

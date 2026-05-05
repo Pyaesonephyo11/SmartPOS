@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="3dp"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="6dp">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:background="#FC384352"
+    android:orientation="horizontal">
+    <!-- Product info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvName"
+            android:text="Espresso"
+            android:textSize="16sp"
+           android:fontFamily="@font/intersemibold"
+            android:textColor="#fff"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvPrice"
+            android:text="2,500 Ks"
+            android:textSize="14sp"
+            android:textColor="#059669"/>
+    </LinearLayout>
+
+    <!-- Quantity -->
+    <LinearLayout
+        android:padding="4dp"
+        android:layout_gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:background="@drawable/bg_productcard"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:background="@drawable/bg_mimus_circle"
+        android:textSize="15sp"
+        android:fontFamily="@font/interbold"
+        android:textColor="#374151"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnMinus"
+        android:text="−"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvQty"
+            android:text="1"
+            android:layout_margin="5dp"
+            android:textSize="15sp"
+            android:fontFamily="@font/interbold"
+            android:textColor="#E3E4E6"/>
+
+    <TextView
+        android:id="@+id/btnPlus"
+        android:textSize="15sp"
+        android:fontFamily="@font/interbold"
+        android:textColor="#374151"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:background="@drawable/bg_circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"/>
+</LinearLayout>
+</LinearLayout>
+</com.google.android.material.card.MaterialCardView>
+

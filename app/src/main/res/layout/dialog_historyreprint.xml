@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+<!-- Title -->
+   <TextView
+    android:text="Transaction Details"
+    android:fontFamily="@font/interbold"
+    android:textSize="18sp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvRepintInvoice"
+        android:text="00001"
+       android:fontFamily="@font/intersemibold"
+        android:textSize="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+<!-- Date -->
+<TextView
+    android:id="@+id/tvReprintDate"
+    android:text="12/21/2025, 12:06 PM"
+    android:layout_marginTop="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+<!-- Status -->
+<TextView
+    android:id="@+id/tvReptintStatus"
+    android:text="Completed"
+    android:textColor="#366839"
+    android:layout_marginTop="4dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        android:layout_marginTop="12dp"
+        app:cardElevation="5dp">
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/rvReprintItems"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+    </androidx.cardview.widget.CardView>
+<LinearLayout
+    android:padding="6dp"
+    android:layout_marginTop="12dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:text="Total Amount"
+       android:fontFamily="@font/interbold"
+        android:layout_weight="1"
+        android:textSize="14sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <TextView
+        android:id="@+id/tvReprintTotal"
+        android:text=" 16,275 Ks"
+        android:fontFamily="@font/interbold"
+        android:gravity="end"
+        android:layout_weight="2"
+        android:textSize="14sp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+<!-- Received & Change -->
+<LinearLayout
+    android:layout_marginTop="16dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- Received -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/bg_received"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Received (ပေးချေငွေ)"
+            android:textSize="12sp"
+            android:textColor="#366839"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvTeprintReceived"
+            android:text="170,000 Ks"
+            android:fontFamily="@font/intersemibold"
+            android:textSize="18sp"
+            android:textColor="#366839"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <!-- Change -->
+    <LinearLayout
+        android:layout_weight="1"
+        android:layout_marginStart="8dp"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/bg_change"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:text="Change ( ပြန်အမ်းငွေ)"
+            android:textSize="12sp"
+            android:textColor="#2D47D9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/tvReprintChange"
+            android:text="153,725 Ks"
+            android:fontFamily="@font/intersemibold"
+            android:textSize="18sp"
+            android:textColor="#2D47D9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</LinearLayout>
+
+<!-- Buttons -->
+<LinearLayout
+    android:layout_marginTop="20dp"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Button
+        android:id="@+id/btnRepintClose"
+        android:text="Close"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"/>
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReprint"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:text="Reprint Receipt"
+        app:icon="@drawable/printer"
+        app:iconSize="18sp"
+        app:iconTint="@color/white"
+        app:iconGravity="textStart"
+        app:iconPadding="8dp"
+        android:layout_weight="1"
+        app:backgroundTint="#059669"
+        android:textColor="@android:color/white"
+        app:rippleColor="#80FFFFFF"
+        app:cornerRadius="10dp" />
+</LinearLayout>
+</LinearLayout>
+

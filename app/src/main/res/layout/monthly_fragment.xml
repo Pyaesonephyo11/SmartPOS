@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F1F1"
+    android:scrollbars="none"
+    android:fillViewport="true"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+<LinearLayout
+    android:orientation="vertical"
+    android:background="#F5F6FA"
+    android:padding="12dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Month Picker -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        android:layout_marginBottom="12dp">
+
+        <TextView
+            android:background="@color/white"
+            android:id="@+id/tvSelectMonth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📅 Select Month"
+            android:textSize="16sp"
+            android:fontFamily="@font/intersemibold"
+            android:padding="14dp"
+            android:textColor="#000"/>
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <!-- TOTAL SECTION -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_marginBottom="12dp">
+
+        <!-- Revenue -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginEnd="6dp">
+
+            <LinearLayout
+                android:background="@color/black"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Revenue"
+                    android:fontFamily="@font/interregular"
+                    android:textSize="14sp"
+                    android:textColor="#666"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvRevenue"
+                    android:text="0 Ks"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/interbold"
+                    android:textColor="#1565C0"
+                   />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Profit -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginStart="6dp">
+
+            <LinearLayout
+                android:background="@color/black"
+                android:orientation="vertical"
+                android:padding="12dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Total Profit"
+                    android:fontFamily="@font/interregular"
+                    android:textSize="14sp"
+                    android:textColor="#666"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tvProfit"
+                    android:text="0 Ks"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/interbold"
+                    android:textColor="#2ECC71"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <!-- Export Button -->
+    <Button
+        android:id="@+id/btnExportPdf"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="🧾 Export Monthly PDF"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:fontFamily="@font/intersemibold"
+        android:backgroundTint="#000"
+        android:textColor="#FFF"
+        android:layout_marginBottom="10dp"/>
+    <!-- Chart -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        app:cardCornerRadius="18dp"
+        app:cardElevation="4dp"
+        android:layout_marginTop="8dp">
+
+        <com.train.pos.MonthlyChartView
+            android:background="#fff"
+            android:id="@+id/monthlyChart"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMonthly"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"
+        android:paddingBottom="8dp"/>
+</LinearLayout>
+</androidx.core.widget.NestedScrollView>

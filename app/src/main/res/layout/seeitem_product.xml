@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="8dp"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="6dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Product Image -->
+        <ImageView
+            android:id="@+id/seeproductimage"
+            android:layout_width="match_parent"
+            android:layout_height="190dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_launcher_foreground" />
+
+        <!-- Price Badge -->
+
+        <!-- Bottom info -->
+        <TextView
+            android:id="@+id/tvseePrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|end"
+            android:layout_margin="10dp"
+            android:background="@drawable/bg_price_badge"
+            android:paddingHorizontal="14dp"
+            android:paddingVertical="6dp"
+            android:text="2,500 Ks"
+            android:textColor="#0FA958"
+            android:textSize="10sp"
+            android:fontFamily="@font/interbold"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:background="@drawable/bg_product_bottom">
+
+            <TextView
+                android:id="@+id/tvseeName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ESPRESSO"
+                android:textColor="@android:color/white"
+                android:fontFamily="@font/interbold"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tvLowStock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOW STOCK"
+            android:padding="3dp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_low_stock"
+            android:fontFamily="@font/intersemibold"
+            android:layout_gravity="center"
+            android:visibility="gone"/>
+
+    </FrameLayout>
+
+</com.google.android.material.card.MaterialCardView>

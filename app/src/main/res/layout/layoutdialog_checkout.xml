@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bg_white_round"
+    >
+
+<!-- Header -->
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Checkout / ငွေပေးချေ"
+        android:textColor="#000"
+        android:textSize="18sp"
+        android:fontFamily="@font/robotomonobold" />
+
+</RelativeLayout>
+
+<!-- Receipt Card -->
+    <androidx.core.widget.NestedScrollView
+        android:scrollbars="none"
+        android:fillViewport="true"
+        android:clipToPadding="false"
+        android:paddingBottom="120dp"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        >
+    <com.google.android.material.card.MaterialCardView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="9dp">
+<LinearLayout
+    android:background="@drawable/bg_receipt"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="12dp">
+
+    <TextView
+        android:fontFamily="@font/robotomonoregular"
+        android:id="@+id/tvshopname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BURMA POS"
+        android:textSize="16sp"
+        android:textColor="#000"
+        android:gravity="center" />
+    <TextView
+        android:id="@+id/tvaddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="No. 45, Pansodan Street, Yangon"
+        android:textSize="12sp"
+        android:textColor="#6B7280"
+        android:layout_gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- DATE + INVOICE -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <TextView
+            android:id="@+id/tvcheckouttime"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="12/24/2025"
+            android:textSize="12sp"
+            android:fontFamily="@font/robotomonoregular"
+            android:textColor="#6B7280"/>
+
+        <TextView
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:fontFamily="@font/robotomonoregular"
+            android:layout_height="wrap_content"
+            android:id="@+id/tvInvoice"
+            android:text="ID #001001"
+            android:textSize="12sp"
+            android:gravity="end"
+            android:textColor="#10B981"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginVertical="8dp"/>
+
+
+    <!-- Items -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvCheckoutItems"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#DDDDDD"
+        android:layout_marginVertical="8dp"/>
+
+    <!-- Total -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:textColor="#000"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="TOTAL"
+            android:fontFamily="@font/robotomonoregular"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:textColor="#000"
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6,000 Ks"
+            android:fontFamily="@font/robotomonoregular"
+            android:textSize="16sp"/>
+    </LinearLayout>
+<!--    <TextView-->
+<!--        android:textColor="#373636"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="Received Amount (လက်ခံငွေ)"-->
+<!--        android:fontFamily="@font/robotomonoregular"-->
+<!--        android:layout_marginTop="12dp"/>-->
+<!--    <EditText-->
+<!--        android:id="@+id/etReceived"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="48dp"-->
+<!--        android:hint="0Ks"-->
+<!--        android:padding="10dp"-->
+<!--        android:textColor="#BDBCBC"-->
+<!--        android:inputType="number"-->
+<!--        android:background="@drawable/bg_input_dark"/>-->
+    <!-- Stock Input -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:boxBackgroundMode="outline"
+        app:boxStrokeColor="@color/light_green"
+        app:hintTextColor="@color/light_green"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusBottomEnd="12dp">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/etReceived"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:hint="Received Amount (လက်ခံငွေ)"/>
+    </com.google.android.material.textfield.TextInputLayout>
+    <TextView
+        android:id="@+id/tvChange"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Change (ပြန်အမ်းငွေ) : 0 Ks"
+        android:textColor="@color/light_green"
+        android:fontFamily="@font/robotomonoregular"
+        android:layout_marginTop="8dp"/>
+    <!-- Footer -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Thank you for shopping!"
+        android:fontFamily="@font/robotomonoregular"
+        android:gravity="center"
+        android:layout_marginTop="8dp"/>
+</LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+    </androidx.core.widget.NestedScrollView>
+<!-- Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:weightSum="3">
+
+        <!-- Cancel Button -->
+<!--        <com.google.android.material.button.MaterialButton-->
+<!--            android:id="@+id/btnSave"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="48dp"-->
+<!--            android:layout_weight="1"-->
+<!--            android:layout_marginEnd="8dp"-->
+
+<!--            android:text="Cancel"-->
+<!--            android:textAllCaps="false"-->
+<!--            android:fontFamily="@font/intersemibold"-->
+
+<!--            android:textColor="#333333"-->
+<!--            app:backgroundTint="#E0E0E0"-->
+
+<!--            app:cornerRadius="12dp"-->
+<!--            app:elevation="4dp"-->
+<!--            app:rippleColor="#20000000"/>-->
+
+        <!-- Print Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnPrint"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="3"
+            android:layout_marginStart="8dp"
+
+            android:text="Print Receipt"
+            android:textAllCaps="false"
+            android:fontFamily="@font/intersemibold"
+
+            android:textColor="@android:color/white"
+            app:backgroundTint="#059669"
+
+            app:icon="@drawable/printer"
+            app:iconTint="@android:color/white"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"
+
+            app:cornerRadius="12dp"
+            app:elevation="4dp"
+            app:rippleColor="#40FFFFFF"/>
+
+    </LinearLayout>
+</LinearLayout>

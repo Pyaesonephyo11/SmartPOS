@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F6F8F7"
+    android:padding="16dp">
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/backsale"
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="48dp"
+        android:text="Back to Shop (အရောင်းသို့)"
+        app:backgroundTint="@color/appcolor"
+        android:textColor="@android:color/white"
+        app:rippleColor="#80FFFFFF"
+        app:cornerRadius="10dp" />
+    <!-- Title -->
+    <TextView
+        android:text="Sale History (အရောင်းမှတ်တမ်း)"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#373636"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="View and manage past transactions"
+        android:textSize="14sp"
+        android:textColor="#373636"
+        android:layout_marginBottom="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:layout_marginBottom="5dp"
+        android:background="#F5F5F5"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvsaleh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" />
+
+    </LinearLayout>
+
+    <!-- Search -->
+<!--    <EditText-->
+<!--        android:id="@+id/etSearch"-->
+<!--        android:hint="Search invoice..."-->
+<!--        android:drawableStart="@android:drawable/ic_menu_search"-->
+<!--        android:padding="12dp"-->
+<!--        android:background="@drawable/bg_search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"/>-->
+
+<!--    &lt;!&ndash; Table Header &ndash;&gt;-->
+<!--    <LinearLayout-->
+<!--        android:layout_marginTop="16dp"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="12dp"-->
+<!--        android:background="@drawable/bg_table_header"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <TextView-->
+<!--            android:text="Date Time"-->
+<!--            android:layout_weight="2"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        <TextView-->
+<!--            android:text="Items Summary"-->
+<!--            android:layout_weight="3"-->
+<!--            android:textStyle="bold"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"/>-->
+
+<!--        <TextView-->
+<!--            android:text="Status"-->
+<!--            android:layout_weight="1"-->
+<!--            android:textStyle="bold"-->
+<!--            android:gravity="end"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"/>-->
+<!--    </LinearLayout>-->
+    <!-- RecyclerView -->
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:backgroundTint="#DEDCDC"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:cardCornerRadius="10dp">-->
+
+<!--        <HorizontalScrollView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:scrollbars="none"-->
+<!--            android:fillViewport="true">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:orientation="vertical">-->
+<!--            <LinearLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:padding="12dp"-->
+<!--                android:orientation="horizontal">-->
+
+<!--                <TextView-->
+<!--                    android:textColor="#373636"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:text="Date Time"/>-->
+
+<!--                <TextView-->
+<!--                    android:textColor="#373636"-->
+<!--                    android:text="Items"-->
+<!--                    android:layout_weight="2"-->
+<!--                    android:layout_width="180dp"-->
+<!--                    android:layout_height="wrap_content"/>-->
+<!--                <TextView-->
+<!--                    android:gravity="center"-->
+<!--                    android:textColor="#373636"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Status" />-->
+
+<!--                <TextView-->
+<!--                    android:textColor="#373636"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Total Amount"/>-->
+
+<!--                <TextView-->
+<!--                    android:textColor="#373636"-->
+<!--                    android:layout_width="100dp"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:layout_weight="1"-->
+<!--                    android:text="Action"/>-->
+<!--            </LinearLayout>-->
+<!--                <View-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="1dp"-->
+<!--                    android:background="#DDDDDD"-->
+<!--                    android:layout_marginVertical="3dp"/>-->
+<!--                <androidx.recyclerview.widget.RecyclerView-->
+<!--                    android:id="@+id/rvSaleHistory"-->
+<!--                    android:clipToPadding="false"-->
+<!--                    android:layout_width="match_parent"-->
+<!--                    android:layout_height="wrap_content" />-->
+<!--            </LinearLayout>-->
+<!--        </HorizontalScrollView>-->
+<!--    </androidx.cardview.widget.CardView>-->
+    <FrameLayout
+        android:id="@+id/frameContainer"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+</LinearLayout>
